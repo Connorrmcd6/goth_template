@@ -18,11 +18,13 @@ This repository serves as a template for building server-side web applications u
 
 ### Installation
 
-1. **Clone the repository**:
+1. **Clone the repository & create .env file**:
 
    ```sh
    git clone https://github.com/yourusername/goth-template.git
    cd goth-template
+   touch .env
+   <!-- add LISTEN_ADDR=":3000" or which ever port you want to .env -->
    ```
 
 2. **Install dependencies**:
@@ -37,14 +39,14 @@ This repository serves as a template for building server-side web applications u
 3. **Build the project**:
 
    ```sh
-   make build
+   make
    ```
 
-4. **Run the application in development mode with hot reloading**:
+4. **Run the application in development mode with hot reloading (use separate terminals for each command so they run simultaneously)**:
    ```sh
-   terminal 1: air
-   terminal 2: templ generate --watch --proxy=http://localhost:3000
-   terminal 3: make css
+   air
+   templ generate --watch --proxy=http://localhost:3000
+   make css
    ```
 
 ### Usage
